@@ -54,3 +54,47 @@ De modo geral, para uma **lista** de ***n* números**, a pesquisa binária preci
 ### Exemplo prático 01:
 Veja o exemplo de código em Python no arquivo "exemplo_01.py"
 
+Para melhor entendimento pense nos seguintes passos:
+- Entenda o escopo da função (Ela trabalha com uma lista ordenada e um item escolhido a ser procurado)
+- Deverá ter um intervalo de busca (n valores)
+- O meio será sempre a metade (valor_baixo + valor_alto / 2)
+- O chute será sempre o meio da lista (lista[meio])
+- O algoritmo deverá retornar o valor ou não (Null) 
+
+## Tempo de execução
+Geralmente, no meio da programação como um todo, é comum utilizar um algoritmo que otimize o máximo de tempo possível com o máximo de eficiência.
+
+### Exemplo de casos: Pesquisa de números
+Pesquisa simples em 100 números: no máximo 100 tentativas
+Pesquisa binária em 100 números: no máximo 7 tentativas
+
+Pesquisa simples em 4 bilhões números: no máximo 4 bilhões tentativas
+Pesquisa binária em 4 bilhões números: no máximo 32 tentativas
+
+Ou seja, a pesquisa binária é executada com ***tempo logarítmico***
+- Pesquisa simples -> Tempo de execução linear: O(n)
+- Pesquisa binária -> Tempo de execução logarítmico: O(Log n)
+
+## Notação Big O
+A notação Big O diz o **quão rápido é um algoritmo**, sendo representada como:
+- O(n)
+- O(Log n)
+- etc
+
+## Tempo de execução dos algoritmos cresce a taxas diferentes
+Não basta saber quanto tempo um algoritmo leva para ser executado - você precisa saber se o tempo de execução aumenta conforme a lista aumenta! E é aí que a notação Big O entra.
+
+A notação Big O não informa os segundos, caso esteja com dúvida. ***Ela permite que você compare o número de operações***, ou seja, **informa o quão rápido um algoritmo cresce**.
+
+## Vendo diferentes tesmpos de execução Big O
+Suponha que você tente desenhar uma grade com 16 divisões em um papel.
+
+### Algoritmo 1
+Uma forma de desenhar seria desenhar um bloco da grade por vez. Neste exemplo, você desenharia um total de 16 divisões em 16 etapas. 
+
+Qual seria o tempo de execução? -> O(n)
+
+### Algoritmo 2
+Uma outra forma seria dobrar o papel. Dobre o papel de novo e de novo. A cada dobra, o número de divisões duplica
+
+Logo, em 4 etapas você terá 16 dobras. Tempo de execução -> O(log n)
