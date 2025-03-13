@@ -1,0 +1,14 @@
+1.1 Suponha que você tenha uma lista de 128 nomes e esteja fazendo uma pesquisa binária. 
+Qual seria o número máximo de etapas que você levaria para encontrar o número desejado?
+
+Resposta:
+Pesquisa binária -> log n 
+=> log 128 => 2^x = 128
+Portanto: log 128 = 7
+
+1.2 Suponha que você duplique o tamanho da lista. Qual seria o número máximo de etapas agora?
+
+Resposta:
+Pesquisa binária -> log n
+=> log 256 => 2^y = 256
+Portanto: log 256 = 8
