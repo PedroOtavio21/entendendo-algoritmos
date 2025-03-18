@@ -56,8 +56,8 @@ Veja o exemplo de código em Python no arquivo "exemplo_01.py"
 
 Para melhor entendimento pense nos seguintes passos:
 - Entenda o escopo da função (Ela trabalha com uma lista ordenada e um item escolhido a ser procurado)
-- Deverá ter um intervalo de busca (n valores)
-- O meio será sempre a metade (valor_baixo + valor_alto / 2)
+- Deverá ter um intervalo de busca ([0, 1, 2, ... , n - 1, n])
+- O meio será sempre a metade (valor_inicial + valor_final / 2)
 - O chute será sempre o meio da lista (lista[meio])
 - O algoritmo deverá retornar o valor ou não (Null) 
 
@@ -74,12 +74,6 @@ Pesquisa binária em 4 bilhões números: no máximo 32 tentativas
 Ou seja, a pesquisa binária é executada com ***tempo logarítmico***
 - Pesquisa simples -> Tempo de execução linear: O(n)
 - Pesquisa binária -> Tempo de execução logarítmico: O(Log n)
-
-## Notação Big O
-A notação Big O diz o **quão rápido é um algoritmo**, sendo representada como:
-- O(n)
-- O(Log n)
-- etc
 
 ## Tempo de execução dos algoritmos cresce a taxas diferentes
 Não basta saber quanto tempo um algoritmo leva para ser executado - você precisa saber se o tempo de execução aumenta conforme a lista aumenta! E é aí que a notação Big O entra.
@@ -98,3 +92,39 @@ Qual seria o tempo de execução? -> O(n)
 Uma outra forma seria dobrar o papel. Dobre o papel de novo e de novo. A cada dobra, o número de divisões duplica
 
 Logo, em 4 etapas você terá 16 dobras. Tempo de execução -> O(log n)
+
+## Exemplos de tempo de execução Big O
+Aqui estão cinco tempos de execução Big O bastante comuns, indo do mais rápido ao mais lento:
+
+- O(log n), também conhecido como *tempo logarítmico*. Exemplo: **pesquisa binária**
+
+- O(n), conhecido como *tempo linear*. Exemplo: **pesquisa simples**
+
+- O(n * log n). Exemplo: um algorítmo rápido de ordenação, como a **ordenação quicksort** (capítulo 4)
+
+- O(n²). Exemplo: um algoritmo lento de ordenação, como a **ordenação por seleção** (capítulo 2)
+
+- O(n!). Exemplo: um algoritmo bastante lento, como o do **caixeiro-viajante** (a seguir!)
+
+Pontos para revisar:
+1. A rapidez de um algorítmo *não é medida em segundos*, mas sim pelo *crescimento do número de operações*
+
+2. Em vez disso, discutimos sobre o *quão rapidamente o tempo de execução de um algoritmo aumenta* conforme o *número de elementos aumenta*.
+
+3. O tempo de execução de algoritmos é expresso pela *notação Big O*.
+
+4. **O(log n)** é *mais rápido* do que **O(n)**, e O(log n) *fica ainda mais rápido* conforme a lista **aumenta**.
+
+## O caixeiro-viajante
+"Aqui está o exemplo de um tempo de execução ruim. Ele é um problema famoso da *ciência da computação*, pois seu crescimento é apavorante e algumas pessoas muito inteligentes acreditam que ele possa ser melhorado."
+
+Tal problema é chamado de "o problema do caixeiro-viajante."
+
+### Exemplo de caso: Caixeiro-viajante
+Você tem um caixeiro-viajante. O caixeiro precisa ir a 6 cidades. Tal sujeito quer passar por todas as cidades percorrendo uma distância mínima.
+
+Podemos enxergar a solução da seguinte forma: analisar cada ordem possível de cidades para visitar. É somada a distância total e escolhido o caminho com menor distância percorrida. Com isso, existem 120 permutações para cinco cidades, logo, precisa-se de 120 operações para resolver o problema das 5 cidades. Para 6 cidades, precisa-se de 720 operações (ou permutações). Para 7 cidades são necessárias 5.050 operações, e assim por diante. 
+
+De maneira geral, para n itens, é necessário n! operações para se chegar em um resultado. Portanto, seu tempo de execução é O(n!) ou *tempo fatorial*. Tal algoritmo, consome muitas operações, exceto em casos de números pequenos.
+
+Você deve estar pensando: "Não haveria outra forma de resolver este algoritmo terrível?" Porém, não. Este é um problema sem uma solução, ou seja, não há um algoritmo mais rápido para resolver este problema.
