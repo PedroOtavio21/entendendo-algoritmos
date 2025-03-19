@@ -1,0 +1,17 @@
+Exercícios
+
+2.1 - Suponha que você esteja criando um aplicativo para acompanhar as suas finanças
+    1. Compras
+    2. Cinema
+    3. Mensalidade do SFBC
+
+Todos os dias você anotará tudo o que gastou em onde gastou. 
+No final do mês, você deverá revisar todos os seus gastos e resumir o quanto gastou.
+Logo, você terá um monte de inserções e poucas leituras.
+Você deverá usar um array ou uma lista encadeada para implementar este aplicativo?
+
+Resposta: Como falado na terceira linha do último parágrafo: "monte de inserções e poucas leituras", o ideal seria 
+utilizar uma Lista Encadeada, por ser mais eficiente em adição de elementos
+
+---------------
+
