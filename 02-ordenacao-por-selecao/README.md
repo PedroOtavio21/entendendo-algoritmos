@@ -26,8 +26,40 @@ Caso apareça outro amigo, teriam que procurar um novo espaço para sentarem tod
 
 Em casos assim, **listas encadeadas** resolvem este problema com uma solução simples.
 
-## Listas encadeadas
+### Listas encadeadas
 
 Com as listas encadeadas, seus dados podem estar armazenados em **qualquer lugar da memória**. Cada item armazena o endereço do próximo item da lista. Um monte de endereços aleatórios de memória estão ligados.
 
 Adicionar um item na lista encadeado é fácil: você coloca em **qualquer lugar da memória** e **armazena o endereço do item anterior**. 
+
+Ou seja, comparadas aos **arrays**, as **listas encadeadas** são *bem melhores* no quesito **inserção de dados**.
+
+### Arrays
+
+As **listas encadeadas** são ótimas para ***ler todos os itens de uma só vez***, porém *é péssima* para **consultar itens específicos da lista**, visto que é feita primeiro a consulta de seu endereço de memória, para assim ter acesso ao seu valor.
+
+Já nos **arrays**, esta consulta é bem diferente, pelo simples fato de você saber o endereço de cada posição desde o início. Arrays *são ótimos* se você deseja **ler elementos aleatórios**, pois pode encontrar qualquer elemento instantaneamente em um array. 
+
+## Terminologia
+
+Os elementos em um array **são numerados**, com uma numeração iniciada em 0, e não em 1. Em quase todas as linguagens de programação começarão os arrays **numerando o primeiro** elemento como **0**.
+
+A posição de um elemento do array é chamada de **índice**. Segue abaixo um exemplo de array:
+```py
+arr = [10, 22, 34, 46, 58]
+
+print(arr[0]) # índice 0 = 10
+print(arr[2]) # índice 2 = 34
+```
+
+Segue abaixo o tempo de execução em *operações comuns* de **arrays** e **listas**:
+
+```
+         | arrays | listas
+leitura  |  O(1)  |  O(n)
+inserção |  O(n)  |  O(1)
+
+O(n) = Tempo de execução linear
+O(1) = Tempo de execução constante
+```
+
