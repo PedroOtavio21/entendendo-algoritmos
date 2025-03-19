@@ -63,3 +63,27 @@ O(n) = Tempo de execução linear
 O(1) = Tempo de execução constante
 ```
 
+## Inserindo algo no meio da lista
+
+Imagine um caso onde você deseja *inserir itens no meio de uma lista*. Onde seria mais eficaz utilizar esta modificação: em um array ou lista encadeada?
+
+No casos das **listas**, basta *mudar apenas o endereço para o qual o elemento anterior está apontando*. Já para os **arrays**, você *deverá mudar todos os itens que estão abaixo do endereço de inserção*.
+
+## Deleções
+
+E no caso de deletar um elemento? Novamente, nas **listas** será feita apenas *a mudança do endereço apontado pelo item anterior*, enquanto nos **arrays**, *tudo precisa ser movido quando um elemento é removido*.
+
+Ao contrário da situação de inserção, a remoção de itens sempre terá sucesso. Pois, poderá falahar quando não houver mais espaço suficiente na memória.
+
+Novamente, aqui estão os exemplos de tempo de execução para **operações comuns** em *arrays* e *lista encadeadas*:
+
+```
+           | arrays | listas
+leitura    |  O(1)  |  O(n)
+inserção   |  O(n)  |  O(1)
+eliminação |  O(n)  |  O(1)
+```
+
+**OBS1**: Vale mensionar que inserções e eliminações terão tempo de execução O(1) somente se você puder acessar instantaneamente o elemento a ser deletado.
+
+**OBS2**: Para os arrays, existem dois tipos de acessos: o *sequencial* e o *aleatório*. Já para as listas, existe apenas o acesso *sequencial*
