@@ -87,3 +87,24 @@ eliminação |  O(n)  |  O(1)
 **OBS1**: Vale mensionar que inserções e eliminações terão tempo de execução O(1) somente se você puder acessar instantaneamente o elemento a ser deletado.
 
 **OBS2**: Para os arrays, existem dois tipos de acessos: o *sequencial* e o *aleatório*. Já para as listas, existe apenas o acesso *sequencial*
+
+## Ordenação por seleção
+
+Vamos juntar tudo aprendido até aqui para você conhecer o seu *segundo algoritmo*: a **ordenação por seleção**. Para seguir nesta seção, você precisará ter compreendido arrays e listas, bem com a notação Big O.
+
+### Exemplo de caso
+Imagine o seu aplicativo mais utilizado para a escutar suas músicas favoritas. Cada uma de suas músicas recebe um contador representado a quantidade de vezes que foram tocadas. 
+
+Com isso, você imagina fazer com que sua lista agora seja da música menos tocada para a mais tocada. Este é um exemplo de algoritmo de ordenação, com tempo de execução de O(n) em sua leitura.
+
+Verfique o exemplo do algoritmo de ordenação no arquivo exemplo em pytho.
+
+## Recapitulando
+
+1. A memória do seu computador é como um conjunto gigante de gavetas.
+2. Quando se quer armazenar múltiplos elementos, usa-se um array ou uma lista.
+3. No array, todos os elementos são armazenados um ao lado do outro.
+4. Na lista, os elementos estão espalhados e um elemento armazena o endereço do próximo elemento.
+5. Arrays permitem leituras rápidas.
+6. Listas encadeadas permitem rápidas inserções e eliminações.
+7. Todos os elementos de um array devem ser do mesmo tipo (todos ints, todos double, e assim por diante).
